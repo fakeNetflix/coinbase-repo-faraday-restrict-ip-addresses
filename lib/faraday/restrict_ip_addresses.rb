@@ -1,5 +1,5 @@
-require 'faraday/restrict_ip_addresses/version'
 require 'ipaddr'
+require 'faraday'
 
 module Faraday
   class RestrictIPAddresses < Faraday::Middleware
@@ -64,3 +64,5 @@ module Faraday
   end
   Request.register_middleware restrict_ip_addresses: lambda { RestrictIPAddresses }
 end
+
+require 'faraday/restrict_ip_addresses/version'
